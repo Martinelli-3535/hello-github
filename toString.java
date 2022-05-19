@@ -9,6 +9,7 @@ public class toString {
 	public static void main(String[] args) {
 		toString t = new toString(2,3);
 		System.out.println(t);
+		System.out.println("이게 맞냐?");
 
 	}
 
