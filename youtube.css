@@ -1,0 +1,128 @@
+/* global */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
+}
+
+button {
+    border : none;
+    background-color: transparent;
+    cursor: pointer; 
+    /* 화살표의 모양을 손모양으로 바꿈  */
+}
+
+
+a, a:active {
+    text-decoration: none;
+    color : inherit;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* navbar */
+
+nav {
+    padding: 0 16px;
+    justify-content: space-between;
+    position : fixed;
+    left:0;
+    top: 0;
+    height: 56px;
+    background-color: white;
+    width: 100%;
+}
+
+.nav-icon {
+    width : 24px;
+    height : 24px;
+    display : block;
+}
+
+.nav-button {
+
+}
+
+/* nav-left */
+
+#logo {
+    box-sizing: content-box;
+    width: 90px;
+    height: 20px;
+    padding: 18px 14px 18px 16px;
+}
+
+#nav-country {
+    margin: 12px 0 0 -10px;
+    color: #212121;
+    font-size: 10px;
+    width: 12.4px;
+    height: 44px;
+}
+/* nav-center */
+
+.nav-center {
+    flex-basis: 728px;
+}
+
+#search-form {
+    flex: 1;
+    margin-left:40px;
+    padding: 0 4px;
+}
+
+#search-form input{
+    padding: 2px 6px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    /* border-radius는 값이 네개면 위부터 시계방향으로 */
+    flex: 1;
+    height: 40px;
+}
+
+#search-form input::placeholder {
+    color: hsl(0, 0%, 6.7%);
+    font-size: 16px;
+}
+
+#search-form button {
+    border: 1px solid #d3d3d3;
+    background-color: #f8f8f8;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    height: 40px;
+    width: 64px;
+    justify-content: center;
+}
+
+#mic-btn {
+    background-color: #f9f9f9;
+    border-radius: 50%;
+}
+
+/* nav-right */
+
+.nav-right {
+    min-width: 225px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#profile-btn {
+    padding: 1px 6px;
+}
+
+#profile-btn img {
+    margin: 0px 6px;
+    border-radius: 50%;
+}
+
+.nav-right .nav-button {
+    /* nav-right 안의 nav-button에만 클래스를 적용 */
+    margin-right: 8px;
+}

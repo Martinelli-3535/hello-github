@@ -1,0 +1,26 @@
+div {
+    background-color: aqua;
+}
+
+.lightBlue {
+    background-color: lightblue;
+}
+
+.orange{
+    background-color: orange;
+}
+
+p, span {
+    width: 100px;
+    height: 100px;
+}
+
+p {
+    background-color: magenta;
+    display: inline;
+}
+
+span {
+    background-color: teal;
+    /* display: block;  */
+}
