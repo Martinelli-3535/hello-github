@@ -11,7 +11,7 @@ int main() {
 
     cout << "p3[1] is " << p3[1] << ".\n";
 
-    p3 = p3 + 1;
+    p3 = p3 + 1;  // double 형 데이터 공간 1개를 더하는것
 
     cout << "Now p3[0] is " << p3[0] << " and ";
     cout << "p3[1] is " << p3[1] << ".\n";
