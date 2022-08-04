@@ -18,7 +18,7 @@ int main(){
     //sum = sumArr(arr, arr+3);
     cout << "함수의 " << "세번째 인덱스 까지의 합은 " << sum << "입니다.\n";
 
-    return 0
+    return 0;
 }
 
 int sumArr(int* begin, int* end){
