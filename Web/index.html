@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        a {
-            color: black;
-            text-decoration: none;         
-        }
-
         /* 코드에 가까이에 있는 명령을 우선시함
         우선순위 id > 클래스 선택자 > 태그 선택자
         id 값은 한번만 사용 가능
@@ -63,6 +58,20 @@
     <title>Document</title>
 </head>
 <body>
+    <input id="night_day" type="button" value="day" onclick="
+    var target = document.querySelector('body');
+    if(this.value == 'night') {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'day';
+    }
+
+    else {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'night';
+    }
+    ">
     <h1><a href="index.html">WEB</a></h1>
     <div id="grid">
         <ol>
