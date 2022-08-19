@@ -70,7 +70,14 @@
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
         this.value = 'night';
-    }
+
+        var i = 0;
+        var alist = document.querySelectorAll('a');
+        while(i < alist.length) {
+            alist[i].style.color = 'blue';
+            i++;
+        }
+    }    
     ">
     <h1><a href="index.html">WEB</a></h1>
     <div id="grid">
