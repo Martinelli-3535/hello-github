@@ -53,31 +53,43 @@
         }
         }
     </style>
+
+    <script>
+        function setColor(color) {
+            var i = 0;
+            var alist = document.querySelectorAll('a');
+            while(i < alist.length) {
+                alist[i].style.color = color;
+                i++;
+            }
+        }
+        function night_Day_Handler(self) {
+        var target = document.querySelector('body');
+        if(self.value == 'night') {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            self.value = 'day';
+
+            setColor('blue');
+        }
+
+        else {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            self.value = 'night';
+
+            setColor('powderblue');
+        }    
+    }
+    </script>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <input id="night_day" type="button" value="day" onclick="
-    var target = document.querySelector('body');
-    if(this.value == 'night') {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value = 'day';
-    }
-
-    else {
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value = 'night';
-
-        var i = 0;
-        var alist = document.querySelectorAll('a');
-        while(i < alist.length) {
-            alist[i].style.color = 'blue';
-            i++;
-        }
-    }    
+        night_Day_Handler(this);
     ">
     <h1><a href="index.html">WEB</a></h1>
     <div id="grid">
