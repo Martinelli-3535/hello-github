@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script>
+        function setColor(color) {
+            var i = 0;
+            var alist = document.querySelectorAll('a');
+            while(i < alist.length) {
+                alist[i].style.color = color;
+                i++;
+            }
+        }
+        function night_Day_Handler(self) {
+        var target = document.querySelector('body');
+        if(self.value == 'night') {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            self.value = 'day';
+
+            setColor('blue');
+        }
+
+        else {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            self.value = 'night';
+
+            setColor('powderblue');
+        }    
+    }
+    </script>
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        a {
-            color: black;
-            text-decoration: none;         
-        }
-
         /* 코드에 가까이에 있는 명령을 우선시함
         우선순위 id > 클래스 선택자 > 태그 선택자
         id 값은 한번만 사용 가능
@@ -63,6 +89,9 @@
     </style>
 </head>
 <body>
+    <input id="night_day" type="button" value="day" onclick="
+        night_Day_Handler(this);
+    ">
     
     <h1><a href="index.html">WEB</a></h1>
 
