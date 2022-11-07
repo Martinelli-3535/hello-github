@@ -3,6 +3,16 @@
 <head>
 
     <script>
+
+        function handlebtnClick(self) {
+            if (self.value == "what?") {
+                self.value = "clicked!";
+            }
+            else {
+                self.value = "what?";
+            }
+        }
+
         function setColor(color) {
             var i = 0;
             var alist = document.querySelectorAll('a');
@@ -11,7 +21,7 @@
                 i++;
             }
         }
-        function night_Day_Handler(self) {
+        function IWannaChickenEating(self) {
         var target = document.querySelector('body');
         if(self.value == 'night') {
             target.style.backgroundColor = 'white';
@@ -36,11 +46,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* 캐싱때문에 css는 외부 파일을 링크하는것이 좋다 */
-        /* 코드에 가까이에 있는 명령을 우선시함
-        우선순위 id > 클래스 선택자 > 태그 선택자
-        id 값은 한번만 사용 가능
-        */
         h1 {
             font-size: 40px;
             text-align:center;
@@ -90,7 +95,7 @@
 </head>
 <body>
     <input id="night_day" type="button" value="day" onclick="
-        night_Day_Handler(this);
+        IWannaChickenEating(this);
     ">
     <h1><a href="index.html">WEB</a></h1>
 
@@ -101,6 +106,8 @@
             <li><a href="3.html">JavaScript</a></li>
         </ol>
         <div id="article">
+            <input id="justbtn" type="button" value="what?" onclick="
+                handlebtnClick(this)">
             <h2>HTML</h2>
             <p>
                 <a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification"><u>Hypertext Markup Language (HTML)</u></a> is the standard markup language for creating web pages and web applications.Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
